@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUTAI.CO.KE - Online Employment Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/pexels-thatguycraig000-1563356.jpg');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: none;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            height: 10%;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .job-card {
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .job-card h3 {
+            margin-top: 0;
+        }
+
+        .apply-button {
+            background-color: #28a745;
+        }
+
+        .apply-button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #0b85a3;
+            color: #000;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MUTAI.CO.KE</h1>
+        <p>Your gateway to online employment opportunities</p>
+        <marquee behavior="scroll" direction="right" scrollamount="10">
+            <span style="color: white;">Check out our latest job listings!</span>
+        </marquee>    
+    </header>
+    
+    <main>
+        <section id="search-section">
+            <h2>Find Jobs</h2>
+            <form id="job-search-form">
+                <input type="text" id="search-input" placeholder="Enter keywords...">
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-results">
+                <!-- Search results will appear here dynamically -->
+            </div>
+        </section>
+        
+        <section id="featured-jobs">
+            <h2>Featured Jobs</h2>
+            <div class="job-card">
+                <h3>Job Title</h3>
+                <p>Description of the job...</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <!-- More job cards can be added here -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy;mutai.co.ke all rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript functionality
+        document.getElementById('job-search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let searchInput = document.getElementById('search-input').value;
+            
+            // Here you would implement fetching job data based on searchInput
+            // For simplicity, let's assume data is fetched and displayed directly
+            let searchResults = document.getElementById('search-results');
+            searchResults.innerHTML = `<p>Showing results for: ${searchInput}</p>`;
+        });
+    </script>
+</body>
+</html>
